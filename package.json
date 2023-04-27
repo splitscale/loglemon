@@ -1,16 +1,36 @@
 {
-  "name": "loglemon-ui",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "@types/ws": "^8.5.4",
+    "typescript": "^5.0.4"
   },
+  "name": "loglemon",
+  "version": "1.2.0",
+  "description": "A command-line tool used to monitor logs in splitscale.",
+  "main": "app.js",
+  "type": "module",
+  "bin": {
+    "lemon": "app.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splitscale/loglemon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/splitscale/loglemon/issues"
+  },
+  "homepage": "https://github.com/splitscale/loglemon#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsc -w",
+    "build": "npx tsc && echo Build output to: ./bin"
+  },
+  "author": "Jerome R. Cabugwason",
+  "license": "MIT",
   "dependencies": {
-    "next": "13.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "ws": "^8.13.0"
   }
 }
