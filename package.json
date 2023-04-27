@@ -5,7 +5,7 @@
     "typescript": "^5.0.4"
   },
   "name": "loglemon",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "A command-line tool used to monitor logs in splitscale.",
   "main": "app.js",
   "type": "module",
