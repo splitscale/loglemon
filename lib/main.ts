@@ -2,7 +2,7 @@
 import WebSocket from 'ws';
 
 interface LogMessage {
-  logger: string;
+  filter: string;
   level: string;
   method: string;
   uri: string;
@@ -14,7 +14,7 @@ interface LogMessage {
 }
 
 interface ErrorMessage {
-  logger: string;
+  filter: string;
   level: string;
   uri: string;
   message: string;
@@ -37,7 +37,7 @@ export default async function main() {
 
       if (message.level === 'INFO') {
         const logMessage: LogMessage = {
-          logger: message.logger,
+          filter: message.filter,
           level: message.level,
           method: message.method,
           uri: message.uri,
@@ -50,7 +50,7 @@ export default async function main() {
         console.log('INFO', logMessage);
       } else if (message.level === 'ERROR') {
         const errorMessage: ErrorMessage = {
-          logger: message.logger,
+          filter: message.filter,
           level: message.level,
           uri: message.uri,
           message: message.message,
